@@ -1,0 +1,45 @@
+/* --------------------------------------------------------------------------
+Hosted Fonts
+-----------------------------------------------------------------------------*/
+
+// @font-face {
+//   font-family: "Eksell";
+//   src: url(" {{ "EksellDisplayWebMedium.eot" | asset_url }} ");
+//   src: url(" {{ "EksellDisplayWebMedium.eot?#iefix" | asset_url }} ") format("embedded-opentype"), url(" {{ "EksellDisplayWebMedium.woff2" | asset_url }} ") format("woff2"), url(" {{ "EksellDisplayWebMedium.woff" | asset_url }} ") format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "Eksell";
+//   src: url(" {{ "EksellDisplayWebMedium.eot" | asset_url }} ");
+//   src: url(" {{ "EksellDisplayWebMedium.eot?#iefix" | asset_url }} ") format("embedded-opentype"), url(" {{ "EksellDisplayWebMedium.woff2" | asset_url }} ") format("woff2"), url(" {{ "EksellDisplayWebMedium.woff" | asset_url }} ") format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+@font-face {
+  font-family: 'MGMedium';
+  src: url('../../assets/MGMedium.otf') format('otf');
+}
+@font-face {
+  font-family: 'MGExtraBold';
+  src: url('../../assets/MGExtraBold.otf') format('otf');
+}
+@font-face {
+  font-family: 'MGHeavy';
+  src: url('../../assets/MGHeavy.otf') format('otf');
+}
+
+
+/* --------------------------------------------------------------------------
+Fonts
+-----------------------------------------------------------------------------*/
+$markRegular: 'Mark Regular', sans-serif;
+$saolMedium: 'Saol Medium', sans-serif;
+$MGMedium: 'MGHeavy';
+$MGExtraBold: 'MGExtraBold';
+$MGMedium: 'MGMedium';
+
+$bodyTextFont: $MGExtraBold;
+$headingFont: $MGExtraBold;

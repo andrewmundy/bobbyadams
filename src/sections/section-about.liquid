@@ -1,0 +1,40 @@
+
+{% if section.settings.about_heading != blank%}
+    <h1>{{section.settings.about_heading}}</h1>
+{% endif %}
+
+
+{% for block in section.blocks %}
+  {% if block.type == 'social_network' %}
+    {{ block.settings.network_name }}
+  {% endif %}
+{% endfor %}
+
+
+
+{% schema %}
+{
+  "name": "About Page",
+  "settings": [
+    {
+        "type":      "textarea",
+        "id":        "about_heading",
+        "label":     "About Page Heading"
+    }
+  ],
+  "blocks": [
+    {
+        "type": "social_network",
+        "name": "Social Networks",
+        "limit": 3,
+        "settings": [
+            {
+                "type":      "textarea",
+                "id":        "network_name",
+                "label":     "Social Network Name"
+            }
+        ]
+    }
+  ]
+}
+{% endschema %}
