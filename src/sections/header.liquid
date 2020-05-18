@@ -1,49 +1,33 @@
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
-  <div class="nav-wrapper" role="banner">
+	<div class="nav-wrapper" role="banner">
+		<div class="container">
+			<!--   LOGO   -->
+			{%- include 'nav-logo' -%}
 
-    <div class="container">
-      <!--   LOGO   -->
-      {%- include 'nav-logo' -%}
+			<!--   NAV   -->
 
-      <!--   NAV   -->
-      {%- include 'nav-menu' -%}
+			<div class="nav-content">
+				<!--   CART   -->
+				{%- include 'nav-menu' -%}
+			</div>
 
-      <!-- SEARCH -->
+			<!-- SEARCH -->
 
-      <!-- {%- include 'nav-search' -%} -->
+			<!-- {%- include 'nav-search' -%} -->
 
-      <!-- ACCOUNT LINKS -->
-      {% if shop.customer_accounts_enabled %}
+			<!-- ACCOUNT LINKS -->
+			<!-- {% if shop.customer_accounts_enabled %}
         {%- include 'nav-account-links' -%}
-      {% endif %}
+      {% endif %} -->
+		</div>
 
-      <!--   CART   -->
-      {%- include 'nav-cart-link' -%}
-    </div>
-
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-  </div>
+		<div class="hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
 </div>
-{% schema %}
-  {
-    "name": "Header",
-    "settings": [
-      {
-        "type": "url",
-        "id": "logo",
-        "label": "Logo image"
-      },
-      {
-        "type": "link_list",
-        "id": "main_linklist",
-        "label": "Menu",
-        "default": "main-menu"
-      }
-    ]
-  }
-{% endschema %}
+{% schema %} { "name": "Header", "settings": [ { "type": "url", "id": "logo",
+"label": "Logo image" }, { "type": "link_list", "id": "main_linklist", "label":
+"Menu", "default": "main-menu" } ] } {% endschema %}

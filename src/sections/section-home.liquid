@@ -1,0 +1,7 @@
+<img src="{{ section.settings.home_banner | img_url: '2800x' }}" />
+
+{% schema %} { "name": "About Page", "settings": [ { "type": "image_picker",
+"id": "home_banner", "label": "Home Banner" } ], "blocks": [ { "type":
+"social_network", "name": "Social Networks", "limit": 3, "settings": [ { "type":
+"textarea", "id": "network_name", "label": "Social Network Name" } ] } ] } {%
+endschema %}

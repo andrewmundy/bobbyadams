@@ -1,0 +1,8 @@
+<script>
+	$("#product-form").on("submit", function (e) {
+		e.preventDefault();
+		var variantId = $("#variant-id").val();
+		CartJS.addItem(variantId);
+		$("body").addClass("open-cart");
+	});
+</script>

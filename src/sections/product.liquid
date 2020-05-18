@@ -33,7 +33,7 @@
     <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
     <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
 
-    <form action="/cart/add" method="post" enctype="multipart/form-data">
+    <form action="/cart/add" method="post" enctype="multipart/form-data" id="product-form">
       {% unless product.has_only_default_variant %}
         {% for option in product.options_with_values %}
           <div class="selector-wrapper js">
@@ -56,8 +56,8 @@
           </div>
         {% endfor %}
       {% endunless %}
-
-      <select name="id" class="no-js" data-product-select>
+      
+      <select id="variant-id" name="id" class="no-js visually-hidden" data-product-select>
         {% for variant in product.variants %}
           <option
             {% if variant == current_variant %}selected="selected"{% endif %}
@@ -116,6 +116,7 @@
       {{ product | json }}
     </script>
   {% endunless %}
+  {% include 'ajax-cart' %}
 </div>
 
 {% schema %}

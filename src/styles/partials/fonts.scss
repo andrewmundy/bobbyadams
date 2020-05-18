@@ -1,45 +1,46 @@
 /* --------------------------------------------------------------------------
 Hosted Fonts
 -----------------------------------------------------------------------------*/
-
-// @font-face {
-//   font-family: "Eksell";
-//   src: url(" {{ "EksellDisplayWebMedium.eot" | asset_url }} ");
-//   src: url(" {{ "EksellDisplayWebMedium.eot?#iefix" | asset_url }} ") format("embedded-opentype"), url(" {{ "EksellDisplayWebMedium.woff2" | asset_url }} ") format("woff2"), url(" {{ "EksellDisplayWebMedium.woff" | asset_url }} ") format("woff");
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: "Eksell";
-//   src: url(" {{ "EksellDisplayWebMedium.eot" | asset_url }} ");
-//   src: url(" {{ "EksellDisplayWebMedium.eot?#iefix" | asset_url }} ") format("embedded-opentype"), url(" {{ "EksellDisplayWebMedium.woff2" | asset_url }} ") format("woff2"), url(" {{ "EksellDisplayWebMedium.woff" | asset_url }} ") format("woff");
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
 @font-face {
-  font-family: 'MGMedium';
-  src: url('../../assets/MGMedium.otf') format('otf');
-}
-@font-face {
-  font-family: 'MGExtraBold';
-  src: url('../../assets/MGExtraBold.otf') format('otf');
-}
-@font-face {
-  font-family: 'MGHeavy';
-  src: url('../../assets/MGHeavy.otf') format('otf');
+	font-family: "MGMedium";
+	src: url('{{ "MGMedium.eot" | asset_url }}');
+	src: url(' {{ "MGMedium.eot?#iefix" | asset_url }} ')
+			format("embedded-opentype"),
+		url(' {{ "MGMedium.woff2" | asset_url }} ') format("woff2"),
+		url(' {{ "MGMedium.woff" | asset_url }} ') format("woff");
+	font-weight: normal;
+	font-style: normal;
 }
 
+@font-face {
+	font-family: "MGBlack";
+	src: url('{{ "MGBlack.eot" | asset_url }}');
+	src: url(' {{ "MGBlack.eot?#iefix" | asset_url }} ')
+			format("embedded-opentype"),
+		url(' {{ "MGBlack.woff2" | asset_url }} ') format("woff2"),
+		url(' {{ "MGBlack.woff" | asset_url }} ') format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
 
+@font-face {
+	font-family: "MGBold";
+	src: url('{{ "MGBold.eot" | asset_url }}');
+	src: url(' {{ "MGBold.eot?#iefix" | asset_url }} ')
+			format("embedded-opentype"),
+		url(' {{ "MGBold.woff2" | asset_url }} ') format("woff2"),
+		url(' {{ "MGBold.woff" | asset_url }} ') format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
 /* --------------------------------------------------------------------------
 Fonts
 -----------------------------------------------------------------------------*/
-$markRegular: 'Mark Regular', sans-serif;
-$saolMedium: 'Saol Medium', sans-serif;
-$MGMedium: 'MGHeavy';
-$MGExtraBold: 'MGExtraBold';
-$MGMedium: 'MGMedium';
+$markRegular: "Mark Regular", sans-serif;
+$saolMedium: "Saol Medium", sans-serif;
+$MGBlack: "MGBlack";
+$MGBold: "MGBold";
+$MGMedium: "MGMedium";
 
-$bodyTextFont: $MGExtraBold;
-$headingFont: $MGExtraBold;
+$bodyTextFont: $MGMedium;
+$headingFont: $MGMedium;
