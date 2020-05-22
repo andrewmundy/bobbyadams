@@ -9,11 +9,17 @@ Layout Helpers
 Default Box sizing, Overflow Styles
 -----------------------------------------------------------------------------*/
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
 	overflow-x: hidden;
+	min-height: 100vh;
+}
+
+input {
+	border-radius: none;
 }
 
 /* --------------------------------------------------------------------------
@@ -22,41 +28,41 @@ Vertical & Horizontal Alignment
 /* Center vertically  */
 %v-aligner {
 	display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+	display: -ms-flexbox;
+	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
 /* Center vertically and horizontally */
 %v-h-aligner {
 	display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+	display: -ms-flexbox;
+	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
 /* --------------------------------------------------------------------------
 Centered Layout
 -----------------------------------------------------------------------------*/
 .container {
-  width: 92%;
-  max-width: 1200px;
-  margin-left: auto;
+	width: 92%;
+	max-width: 1200px;
+	margin-left: auto;
 	margin-right: auto;
 	@include tablet-up {
 		.container {
@@ -96,7 +102,7 @@ Clearfix helpers (for floats)
 }
 
 .clearer {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }

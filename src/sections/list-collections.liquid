@@ -1,0 +1,30 @@
+<script>
+	$(document).ready(function ($) {
+		var url = window.location.href;
+		var activePage = url;
+		$('.shop-selection li a').each(function () {
+			var linkPage = this.href;
+			var link = linkPage.split("/")[linkPage.split("/").length -1]
+			if (activePage == linkPage) {
+				$(this).closest("li").addClass("current");
+			}
+
+			if (activePage.split("/").find(el => el === "Stretched Canvas")){
+				$(this).closest("li").addClass("current");
+			}
+			if(link === "18x24pencil" || link === "5x7pencil" || link === "Flatworks" || link === "Stretched Canvas"){
+				$("#Art-tab").addClass("current");
+			}
+		});
+	});
+</script>
+<div class="shop-selection">
+	{% for collection in collections %}
+		{% assign joined = collection.title | split: " " %}
+		<li id="{{joined | join: "-" | downcase}}-tab">
+			<a href="{{ collection.url }}" title="{{ 'collections.general.link_title' | t: title: title }}">
+				{{ collection.title }}
+			</a>
+		</li>
+	{% endfor %}
+  </div>

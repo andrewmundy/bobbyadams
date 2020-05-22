@@ -1,0 +1,30 @@
+#contact_form {
+	width: 50vmin;
+	margin: 50px auto;
+	border: solid 2px black;
+	padding: 20px;
+	box-shadow: -5px 5px 0 black;
+	input:placeholder {
+		color: black;
+    }
+    input, textarea {
+        font-size: 18px;
+    }
+	input {
+		margin-bottom: 15px;
+	}
+	textarea {
+		height: 100px;
+		border: none;
+	}
+	.btn {
+		padding: 10px;
+		background: black;
+		color: white;
+	}
+	@include mobile-only {
+		width: 90vmin;
+		margin: 10px auto;
+		padding: 10px;
+	}
+}

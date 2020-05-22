@@ -1,0 +1,28 @@
+<!-- -====================================
+Body Styles
+=========================================--->
+<div
+  class="body-styles"
+  style="background-color: {{section.settings.background_color}}; color: {{section.settings.text_color}};"
+>
+
+</div>
+{% schema %}
+{
+    "name": "Body Styles",
+    "settings": [
+      {
+        "id": "text_color",
+        "type": "color",
+        "label": "Text Color",
+        "default": "#000"
+      },
+      {
+        "id": "background_color",
+        "type": "color",
+        "label": "Background Color",
+        "default": "#fff"
+      }
+    ]
+  }
+{% endschema %}

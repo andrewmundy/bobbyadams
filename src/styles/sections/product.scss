@@ -1,4 +1,60 @@
 .social-sharing svg {
-  display: block;
-  width: 2rem;
+	display: block;
+	width: 2rem;
+}
+
+.product {
+	@include mobile-only {
+		flex-direction: column;
+	}
+	.product__image {
+		margin-bottom: 30px;
+		@include mobile-only {
+			margin-bottom: 10px;
+		}
+	}
+	.product__description {
+		.product-form {
+			width: 360px;
+			.cart {
+				display: flex;
+				justify-content: flex-start;
+				align-items: flex-end;
+				margin-bottom: 20px;
+				.quantity {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					input {
+						font-size: 15px;
+						margin-right: 10px;
+						width: 30px;
+						border-bottom: solid 3px black;
+						padding: 5px;
+					}
+				}
+				button {
+					font-size: 15px;
+					background: none;
+					border: solid 3px black;
+					padding: 5px;
+				}
+				button:disabled {
+					border: solid 3px currentColor;
+				}
+			}
+		}
+	}
+}
+.button {
+	font-size: 15px;
+	background: none;
+	border: solid 3px black;
+	padding: 5px;
+}
+.price {
+	margin: 20px 0;
+	span {
+		font-size: 20px;
+	}
 }

@@ -7,19 +7,17 @@
 <!-- ===================================
 CART
 ====================================== -->
-
 {% if cart.item_count != 0 %}
 <li>
 	<a
 		href="/cart"
 		data-cart-view="data-cart-view"
-		class="hide-mobile cart-icon js-view-cart"
+		class="cart-icon js-view-cart"
 	>
 		<!-- {% include 'icon-cart' %} -->
-		<span class="js-cart-counter cart-counter" rv-html="cart.item_count">{{
-			cart.item_count
-		}}</span>
+		<span class="js-cart-counter cart-counter" rv-html="cart.item_count">
+			{{cart.item_count}}
+		</span>
 	</a>
 </li>
-
 {% endif %}

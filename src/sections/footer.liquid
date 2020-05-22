@@ -14,9 +14,9 @@
     {%- include 'menu-footer' -%}
 
     <!-- Copyright -->
-    <div class="copyright">
+    {%- comment -%} <div class="copyright">
       <p>{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}.</p>
-    </div>
+    </div> {%- endcomment -%}
   </div>
 </footer>
 

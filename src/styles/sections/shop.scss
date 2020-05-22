@@ -1,0 +1,47 @@
+.shop-selection {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 50px;
+	a {
+		font-size: 25px;
+		@include mobile-only {
+			font-size: 10px;
+		}
+	}
+	a:hover {
+		color: darken($primaryAnchorColor, 10%);
+		border-bottom: solid black 2px;
+	}
+}
+
+.flex-collection {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	.product {
+		margin-bottom: 50px;
+		img {
+			margin-bottom: 10px;
+		}
+		.product--title {
+			font-size: 25px;
+		}
+		.product--price {
+		}
+		@include mobile-only {
+			margin-bottom: 20px;
+			width: 40vw;
+			.product--title {
+				font-size: 18px;
+			}
+			a {
+				img {
+					width: 100%;
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+}
