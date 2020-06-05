@@ -106,3 +106,11 @@ Clearfix helpers (for floats)
 	display: table;
 	clear: both;
 }
+
+.pagination {
+	margin-top: 50px;
+	font-size: 30px;
+	@include mobile-only {
+		font-size: 18px;
+	}
+}

@@ -8,10 +8,12 @@
 			if (activePage == linkPage) {
 				$(this).closest("li").addClass("current");
 			}
+			console.log(link)
 
 			if (activePage.split("/").find(el => el === "Stretched Canvas")){
 				$(this).closest("li").addClass("current");
 			}
+
 			if(link === "18x24pencil" || link === "5x7pencil" || link === "Flatworks" || link === "Stretched Canvas"){
 				$("#Art-tab").addClass("current");
 			}

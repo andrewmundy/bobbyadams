@@ -1,13 +1,17 @@
 .shop-selection {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	margin-bottom: 50px;
+	/* one item */
 	a {
 		font-size: 25px;
 		@include mobile-only {
 			font-size: 10px;
 		}
+	}
+	li {
+		border-bottom: 3px solid transparent;
 	}
 	li:hover {
 		color: darken($primaryAnchorColor, 10%);
@@ -21,7 +25,7 @@
 	align-items: center;
 	flex-wrap: wrap;
 	.product {
-		margin-bottom: 50px;
+		margin: 20px;
 		img {
 			margin-bottom: 10px;
 		}
@@ -29,6 +33,12 @@
 			font-size: 25px;
 		}
 		.product--price {
+		}
+		.sold-out {
+			background: red;
+			color: white;
+			padding: 3px;
+			text-align: center;
 		}
 		@include mobile-only {
 			margin-bottom: 20px;
@@ -44,4 +54,8 @@
 			}
 		}
 	}
+}
+
+.current {
+	border-bottom: 3px solid black !important;
 }

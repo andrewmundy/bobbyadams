@@ -12,9 +12,6 @@ Body Open Mobile Nav Styles
 /* --------------------------------------------------------------------------
 Header Navigation Styles
 -----------------------------------------------------------------------------*/
-.current {
-	border-bottom: 3px solid black;
-}
 .nav-wrapper {
 	margin-bottom: 50px;
 	@include mobile-only {
@@ -55,6 +52,7 @@ Header Navigation Styles
 					display: flex;
 					justify-content: space-between;
 					li {
+						// border-bottom: 3px solid rgba(0, 0, 0, 0);
 						a {
 							font-size: 30px;
 							@include mobile-only {
@@ -196,7 +194,8 @@ Hamburger Icon styles
 
 .left-eye {
 	transition: rotate 100ms;
-	transform-origin: 18.4% 53%;
+	transform-origin: 18.6% 55%;
+	transform: translateZ(0);
 	@include mobile-only {
 		transition: all 500ms;
 	}
@@ -204,8 +203,9 @@ Hamburger Icon styles
 .right-eye {
 	transition: rotate 100ms;
 	transform-origin: 26% 55%;
+	transform: translateZ(0);
 	@include mobile-only {
-		transition: all 500ms;
+		transition: all 0ms;
 	}
 }
 
