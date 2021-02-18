@@ -1,11 +1,11 @@
 .shop-selection {
 	display: flex;
-	justify-content: space-around;
+	justify-content: left;
 	align-items: center;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 	/* one item */
 	a {
-		font-size: 25px;
+		font-size: 20px;
 		@include mobile-only {
 			font-size: 10px;
 		}
@@ -20,14 +20,27 @@
 }
 
 .flex-collection {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 30px 30px;
+	grid-template-areas:
+		". . ."
+		". . ."
+		". . .";
+	@include mobile-only {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas:
+			". ."
+			". .";
+	}
 	.product {
-		margin: 20px;
-		img {
-			margin-bottom: 10px;
+		.product--image {
+			img {
+				margin-bottom: 10px;
+				max-width: 100%;
+			}
 		}
 		.product--title {
 			font-size: 25px;

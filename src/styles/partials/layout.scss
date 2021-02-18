@@ -64,6 +64,9 @@ Centered Layout
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
+	@include mobile-only {
+		width: 96%;
+	}
 	@include tablet-up {
 		.container {
 			width: 96%;

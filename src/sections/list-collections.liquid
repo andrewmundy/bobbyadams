@@ -1,5 +1,5 @@
 <script>
-	$(document).ready(function ($) {
+	{%- comment -%} $(document).ready(function ($) {
 		var url = window.location.href;
 		var activePage = url;
 		$('.shop-selection li a').each(function () {
@@ -18,15 +18,15 @@
 				$("#Art-tab").addClass("current");
 			}
 		});
-	});
+	}); {%- endcomment -%}
 </script>
 <div class="shop-selection">
-	{% for collection in collections %}
+	{%- comment -%} {% for collection in collections %}
 		{% assign joined = collection.title | split: " " %}
 		<li id="{{joined | join: "-" | downcase}}-tab">
 			<a href="{{ collection.url }}" title="{{ 'collections.general.link_title' | t: title: title }}">
 				{{ collection.title }}
 			</a>
 		</li>
-	{% endfor %}
+	{% endfor %} {%- endcomment -%}
   </div>

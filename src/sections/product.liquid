@@ -28,11 +28,13 @@
       {% if product.images.size > 1 %}
         <ul>
           {% for image in product.images %}
+            {% if image %}
             <li>
               <a href="{{ image.src | img_url: '480x480' }}" data-product-single-thumbnail>
                 <img src="{{ image.src | img_url: '160x160' }}" alt="{{ image.alt | escape }}">
               </a>
             </li>
+            {% endif %}
           {% endfor %}
         </ul>
       {% endif %}

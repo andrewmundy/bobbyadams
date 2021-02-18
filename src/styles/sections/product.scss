@@ -2,9 +2,9 @@
 	display: block;
 	width: 2rem;
 }
-
 .product {
 	@include mobile-only {
+		display: flex;
 		flex-direction: column;
 	}
 	.product__image {
@@ -13,6 +13,11 @@
 			margin-bottom: 10px;
 		}
 	}
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 30px;
+	grid-row-gap: 0px;
 	.product__description {
 		.product-form {
 			width: 360px;
@@ -44,6 +49,12 @@
 				}
 			}
 		}
+	}
+}
+.product-grid {
+	.product {
+		display: flex;
+		flex-direction: column;
 	}
 }
 .button {

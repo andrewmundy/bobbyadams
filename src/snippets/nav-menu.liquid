@@ -49,7 +49,10 @@
 					href="{{ link.url }}"
 					{% if link.title == "Instagram" %} target="_blank"{% endif %}
 				>
-					{{ link.title | escape }}{% if link.title == "Instagram" %}➚{% endif %}
+					{% if link.title != "Instagram" %}{{ link.title | escape }}{% endif %}
+					{% if link.title == "Instagram" %}
+						<img class="instagram" src="{{ "ig.png" | asset_url }}"/>
+					{% endif %}
 				</a>
 			</li>
 		{% endif %} 

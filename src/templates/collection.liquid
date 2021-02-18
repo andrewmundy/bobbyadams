@@ -1,7 +1,7 @@
 {% section 'list-collections' %}
 
 {% paginate collection.products by 12 %}
-<header role="banner">
+{%- comment -%} <header role="banner">
 	<!-- <h1>{{ collection.title }}</h1> -->
 	{% if collection.description != blank %}
 	<div class="rte">
@@ -20,13 +20,13 @@
 		{% endif %} {% endfor %}
 	</ul>
 	{% endif %}
-</header>
+</header> {%- endcomment -%}
 
-<div class="flex-collection">
+<div class="flex-collection product-grid">
 	{% for product in collection.products %}
 	<div class="product">
 		{% if product.featured_image != blank %}
-		<a href="{{ product.url | within: collection }}">
+		<a class="product--image" href="{{ product.url | within: collection }}">
 			{{
 				product.featured_image.src
 					| img_url: "480x480"
@@ -34,15 +34,15 @@
 			}}
 		</a>
 		{% endif %}
+		{% unless product.available %}
+			<p class="sold-out">
+				Sorry {{ "products.product.sold_out" | t }}
+			</p>
+		{% endunless %}
 		<a class="product--title" href="{{ product.url | within: collection }}">{{
 			product.title
 		}}</a>
 		<p class="product--price">
-			{% unless product.available %}
-				<p class="sold-out">
-					Sorry {{ "products.product.sold_out" | t }}
-				</p>
-			{% endunless %}
 			{% if product.compare_at_price > product.price %} 
 				{% if product.price_varies %} 
 					{%- assign sale_price = product.price |money -%}
