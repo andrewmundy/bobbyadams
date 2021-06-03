@@ -9,6 +9,15 @@
 	}
 	.product__image {
 		margin-bottom: 30px;
+		ul {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			li {
+				margin-top: 1rem;
+				margin-right: 1rem;
+			}
+		}
 		@include mobile-only {
 			margin-bottom: 10px;
 		}
