@@ -65,6 +65,7 @@ Header Navigation Styles
 						justify-content: space-between;
 						margin-top: 10px;
 						flex-wrap: wrap;
+						word-wrap: break-word;
 						margin-bottom: 10px;
 					}
 					li {
@@ -75,7 +76,7 @@ Header Navigation Styles
 						a {
 							font-size: 20px;
 							@include mobile-only {
-								font-size: 14px;
+								font-size: 0.8em;
 							}
 						}
 						.cart-counter {
